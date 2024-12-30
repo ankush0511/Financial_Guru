@@ -48,10 +48,17 @@ if SERP_API_KEY:
     yahhof=CustomYahooFinanceNewsTool(top_k_results=1, doc_content_chars_max=500)
     # latest_query = prompt
     if "messages" not in st.session_state:
-      st.session_state["messages"] = [
-    {"role": "user", "content": "How can I get rich?"}, 
-    {"role": "assistant", "content": "Getting rich involves a combination of smart investments, hard work, and financial discipline. Have you thought about investing or building new skills?"}
+     st.session_state["messages"] = [
+    {
+        "role": "user",
+        "content": "Hi, I am a chatbot. How can I assist you?"
+    },
+    {
+        "role": "assistant",
+        "content": "Hello! I'm here to help you with your queries."
+    }
 ]
+
 
     for msg in st.session_state.messages:
       st.chat_message(msg["role"]).write(msg["content"])
