@@ -21,7 +21,6 @@ os.environ['LANGCHAIN_API_KEY'] = os.getenv('LANGCHAIN_API_KEY')
 os.environ['LANGCHAIN_TRACING_V2'] = 'true'
 os.environ["LANGCHAIN_PROJECT"] = "Finance"
 os.environ['GROQ_API_KEY'] = os.getenv('GROQ_API_KEY')
-os.environ['SERP_API_KEY']=os.getenv('SERP_API_KEY')
 class CustomYahooFinanceNewsTool(YahooFinanceNewsTool):
   @staticmethod
   def _format_results(docs: Iterable[Document], query: str) -> str:
